@@ -1,0 +1,9 @@
+- name: Stop docker containers if running
+  docker_service:
+    project_src: "{{ playbook_dir }}/../"
+    state: absent
+
+- name: Start docker containers
+  docker_service:
+    project_src: "{{ playbook_dir }}/../"
+    state: present

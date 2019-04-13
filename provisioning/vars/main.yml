@@ -1,0 +1,3 @@
+sqs_queues:
+    - test_queue
+    - levi_queue

@@ -1,0 +1,4 @@
+- name: Create SQS Queues
+  become: no
+  shell: aws --endpoint-url=http://localhost:4576 sqs create-queue --region us-east-1 --queue-name "{{ item }}"
+  loop: "{{ sqs_queues }}"
